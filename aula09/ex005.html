@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula09 Ex005</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: rgb(255, 255, 255);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg1">Clique em mim 1</div>
+    <div name="msg2">Clique em mim 2</div>
+    <div id="msg3">Clique em mim 3</div>
+    <script>
+        var paragrafo1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(`Está escrito assim: ${paragrafo1.innerText}`)
+
+        var div1 = window.document.getElementById('msg1')
+        div1.innerText = 'Estou aguardando 1...'
+        window.document.getElementById('msg1').innerText = 'Estou aguardando 1...'
+
+        var div2 = window.document.getElementsByName('msg2')[0]
+        div2.innerText = 'Estou aguardando 2...'
+        window.document.getElementsByName('msg2').innerText = 'Estou aguardando 2...'
+
+        var div3 = window.document.querySelector('div#msg3')
+        div3.innerText = 'Estou aguardando 3...'
+        window.document.querySelector('div#msg3').innerText = 'Estou aguardando 3...'
+    </script>
+</body>
+</html>

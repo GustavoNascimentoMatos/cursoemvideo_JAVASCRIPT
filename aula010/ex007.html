@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula10 Ex007</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores:</h1>
+    <input type="number" name="n_txtn1" id="i_txtn1"> +
+    <input type="number" name="n_txtn2" id="i_txtn2">
+    <input type="button" name="n_somar" id="i_somar" value="Somar" onclick="somar()">
+    <div id="res">Resultado: </div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('i_txtn1')
+            var tn2 = window.document.querySelector('input#i_txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2
+            res.innerText = (`Resultado: ${soma}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula06 Ex004</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        //s.toUpperCase() = Coloca todas as letras em maiúsculas 
+        //s.toLowerCase() = Coloca todas as letras em minúsculas
+
+        var nome = window.prompt('Qual é o seu nome? ')
+        document.write(`Olá, <strong>${nome}</strong>! seu nome tem ${nome.length} letras<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}<br>`)
+
+        //n.toFixed(2) = Define a quantidade de casas decimais de um número real
+        //n.replace('old','new') = Realiza a substituição dos valores indicados
+        //n.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) = Cria um objeto formatando a variável com valor monetário do Brasil
+
+        var n1 = 1545.5
+        document.write(`O valor de n1 é: ${n1}<br>`)
+        n2 = n1.toFixed(2).replace('.',',')
+        document.write(`O valor de n2 é: ${n2}<br>`)
+        n3 = n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+        document.write(`O valor de n3 é: ${n3}<br>`)
+
+    </script>
+
+</body>
+</html>

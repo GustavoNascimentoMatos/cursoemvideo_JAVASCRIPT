@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula10 Ex006</title>
+    <style>
+        div#area {
+            background-color: rgb(42, 139, 42);
+            font: normal 20pt Arial;
+            color: rgb(255  255 255);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var divarea = window.document.getElementById('area')
+
+        divarea.addEventListener('click', clicar)
+        divarea.addEventListener('mouseenter', entrar)
+        divarea.addEventListener('mouseout', sair)
+
+        function clicar() {   
+            divarea.innerText = 'Clicou!'
+            divarea.style.background = 'red'
+        }
+        function entrar() {
+            divarea.innerText = 'Entrou!'
+        }
+        function sair() {
+            divarea.innerText = 'Saiu!'
+            divarea.style.background = 'green'
+        }
+    </script>
+
+</body>
+</html>

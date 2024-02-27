@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula11 Ex009</title>
+</head>
+<body>
+    <h2>Validando pais</h2>
+    Informe em qual país você nasceu: <input type="text" name="n_pais" id="i_pais">
+    <input type="button" name="n_btn_verificar" id="i_btn_verificar" value="Confirmar" onclick="validar_pais()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function validar_pais() {
+            var txt_pais = window.document.getElementById('i_pais')
+            var resposta = window.document.getElementById('res')
+            var pais = (txt_pais.value.toUpperCase())
+
+            if(pais === 'BRASIL'){
+                resposta.innerHTML = `Voce nasceu no Brasil, e portanto é brasileiro!`
+            } else {
+                resposta.innerHTML = `Você nasceu em ${txt_pais.value}, portanto é estranjeiro!`
+            }
+        }
+    </script>
+
+</body>
+</html>
